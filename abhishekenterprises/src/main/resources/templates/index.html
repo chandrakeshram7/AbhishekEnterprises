@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Enterprises</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+
+    <header id="headd">
+        <div class="navv">
+            <img src="/aelogo" alt="Image">
+        <h1 >Abhishek Enterprises</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#order">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="background-image: url('/images/heroimg.jpg');" data-aos="fade-bottom" data-aos-duration="2000">
+        <div class="hero-content">
+            <h1>Your Vision, Our Fabrication.</h1>
+            <h2 style="font-weight: 100; margin-bottom: 2rem;">Your trusted partner for top-quality welding and fabrication services.</h2>
+            <button onclick="redirectToWhatsApp() " class="whatsapp-button" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 300;">Order via WhatsApp</button>
+        </div>
+    </section>
+
+    <!--Slider Section-->
+    
+    <!-- About Us Section -->
+    <div class="aboutus" style="justify-content: space-around;" id="aboutus">
+        <div class="info" data-aos="slide-right" data-aos-duration="2000" >
+            <h1>About Us</h1>
+            <p>We are a Agrotech Company that aims to assist the farmers in their day-to-day activities. We provide 
+                Personalized Scheme Recommendation, Personalized Crop Recommendation, Access to Daily News Feeds and much more.
+                Lets strengthen the backbone of our economy. If you want more information You can simply 
+                click below.
+            </p>
+            <button class="learn" type="submit" > Learn More</button>
+        </div>
+        <div class="vid" data-aos="slide-left"  data-aos-duration="2000">
+            <img src="/images/heroimg.jpg" alt=""  style="border-radius: 19px;" height="400" width="600">
+        </div>
+        <!-- <div class="svg1"></div>
+        <div class="svg1"></div>
+        <div class="svg1"></div>
+        <div class="svg1"></div>
+        <div class="svg1"></div> -->
+        
+        
+    </div>
+    <!-- Services Section -->
+    
+    <div class="banner" id="services">
+        <h1 style="color: #ffbb3b; font-size: 4rem;">Our Services</h1>
+        <hr style="height: 7px; width: 260px; color:red;background-color: red;border-style: none;align-self: center;margin: auto;">
+        <br>
+        <div class="slider" style="--quantity:6">
+            <div class="item" style="--position:1"><img src="/images/heroimg.jpg" alt=""></div>
+            <div class="item" style="--position:2"><img src="/images/heroimg.jpg" alt=""></div>
+            <div class="item" style="--position:3"><img src="/images/heroimg.jpg" alt=""></div>
+            <div class="item" style="--position:4"><img src="/images/heroimg.jpg" alt=""></div>
+            <div class="item" style="--position:5"><img src="/images/heroimg.jpg" alt=""></div>
+            <div class="item" style="--position:6"><img src="/images/heroimg.jpg" alt=""></div>
+
+        </div>
+    </div>
+
+    
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-item">
+            <p>"Exceptional welding service! The team was professional, efficient, and delivered quality work."</p>
+            <span>- Alex Johnson</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"Highly recommend! Their fabrication skills are unmatched and their attention to detail is impressive."</p>
+            <span>- Maria Gomez</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"Quick turnaround and excellent repair work on our machinery. Couldn't be happier!"</p>
+            <span>- Kevin Lee</span>
+        </div>
+    </section>
+
+    <!-- Order Now Section -->
+    <section class="order" id="order">
+        <h2>Order Now</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Select Service:</label>
+            <select id="service" name="service">
+                <option value="custom-welding">Custom Welding</option>
+                <option value="metal-fabrication">Metal Fabrication</option>
+                <option value="repair-services">Repair Services</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Welding & Fabrication Services. All Rights Reserved.</p>
+        <p><a href="#home">Back to top</a></p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "Want excellent fabrication works to be done ?", "Want your creativity meet excellent engineering ?", "Want Precision Welding & Metal Cutting ?","Abhishek Enterprises - One stop solution for all your problems!"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+
+
+  
+    AOS.init();
+    
+    function redirectToWhatsApp() {
+        const phoneNumber = '919172948776'; // Replace with your WhatsApp number
+        const message = 'Hello Abhishek Enterprises, I would like to place an order.'; // Customize your message
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    }
+    window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('#headd');
+    if (window.scrollY > 50) { // Change to black after scrolling 50px
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+    
+    </script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

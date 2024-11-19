@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/**",
+        "use": "@vercel/java"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/.*",
+        "dest": "/api/AbhishekenterprisesApplication.java"
+      }
+    ]
+  }
+  

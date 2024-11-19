@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AbhishekenterprisesApplication<abhishekenterprises>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.abhishekenterprises.abhishekenterprises.AbhishekenterprisesApplication",
+            "projectName": "abhishekenterprises",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
